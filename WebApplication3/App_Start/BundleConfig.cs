@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace WebApplication3
+namespace OhDrats
 {
     public class BundleConfig
     {
@@ -10,6 +10,9 @@ namespace WebApplication3
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.validate*"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -23,6 +26,14 @@ namespace WebApplication3
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/Angular").Include(
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-route.js"));
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/app/app.js",
+                "~/app/HomeController.js",
+                "~/app/LoginController.js",
+                "~/app/SignUpController.js"));
         }
     }
 }
