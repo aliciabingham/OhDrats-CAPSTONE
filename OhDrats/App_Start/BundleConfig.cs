@@ -31,9 +31,10 @@ namespace OhDrats
                 "~/Scripts/angular-route.js"));
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 "~/app/app.js",
-                "~/app/HomeController.js",
-                "~/app/LoginController.js",
-                "~/app/SignUpController.js"));
+                "~/app/Controllers/HomeController.js",
+                "~/app/Controllers/LoginController.js",
+                "~/app/Controllers/SignUpController.js",
+                "~/app/Controllers/LandingController.js"));
         }
     }
 }

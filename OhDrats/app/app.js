@@ -16,6 +16,16 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "app/Partials/SignUp.html",
             controller: "SignUpController"
         })
+        .when("/landing",
+        {
+            templateUrl: "app/Partials/LandingPage.html",
+            controller: "LandingController"
+        })
+        .when("/opponent",
+        {
+            templateUrl: "app/Partials/Opponent.html",
+            controller: "OpponentCtrl"
+        })
         .when("/login",
         {
             templateUrl: "app/Partials/Login.html",
