@@ -1,10 +1,13 @@
-﻿app.controller("LoginController", ["$scope", "$http", "$location",
-    function ($scope, $http, $location) {
+﻿app.controller("LoginController", ["$scope", "$http", "$location", "$rootScope",
+    function ($scope, $http, $location, $rootScope) {
 
-        $scope.username = "";
-        $scope.password = "";
+        $scope.username = "b@b.com";
+        $scope.password = "aS$1234";
 
         console.log("first login controller check");
+
+
+
         $scope.login = function () {
             console.log("you clicked login");
             $http({
@@ -26,7 +29,10 @@
                 // sessionStorage.removeItem for logout (keyname)
                 $http.defaults.headers.common['Authorization'] = `bearer ${result.data.access_token}`;
 
-                $location.path("/home");
+                $rootScope.username = result.data.userName;
+
+                $location.path("/landing");
+
             });
         };
     }
