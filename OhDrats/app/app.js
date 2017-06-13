@@ -21,10 +21,15 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "app/Partials/LandingPage.html",
             controller: "LandingController"
         })
-        .when("/opponent",
+        .when("/battle",
         {
-            templateUrl: "app/Partials/Opponent.html",
-            controller: "OpponentCtrl"
+            templateUrl: "app/Partials/Battle.html",
+            controller: "BattleController"
+        })
+        .when("/gun",
+        {
+            templateUrl: "app/Partials/Gun.html",
+            controller: "GunController"
         })
         .when("/login",
         {

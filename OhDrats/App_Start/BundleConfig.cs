@@ -34,7 +34,9 @@ namespace OhDrats
                 "~/app/Controllers/HomeController.js",
                 "~/app/Controllers/LoginController.js",
                 "~/app/Controllers/SignUpController.js",
-                "~/app/Controllers/LandingController.js"));
+                "~/app/Controllers/LandingController.js",
+                "~/app/Controllers/BattleController.js",
+                "~/app/Controllers/GunController.js"));
         }
     }
 }
