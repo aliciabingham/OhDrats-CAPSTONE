@@ -261,9 +261,12 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BattleController.cs" />
+    <Compile Include="Controllers\GunController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\BattleRepository.cs" />
+    <Compile Include="DAL\GunRepository.cs" />
     <Compile Include="DAL\IBattleRepository.cs" />
+    <Compile Include="DAL\IGunRepository.cs" />
     <Compile Include="DAL\IOpponentRepository.cs" />
     <Compile Include="Controllers\OpponentController.cs" />
     <Compile Include="DAL\OpponentRepository.cs" />
@@ -280,6 +283,7 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Battle.cs" />
+    <Compile Include="Models\Gun.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Opponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
