@@ -6,11 +6,11 @@
             $http({
                 method: 'POST',
                 url: "api/gun",
-                data: { GunName: $scope.gunName }
+                data: { GunName: $scope.gunName, AmountOfAmmo: $scope.AmountOfAmmo }
             })
              .then(function (result) {
-               console.log("result from battle=", result);
-            });  
-        }
+                 console.log("result from gun=", result);
+             });
+        };
     }
 ]);
