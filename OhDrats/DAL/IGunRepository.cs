@@ -10,5 +10,6 @@ namespace OhDrats.DAL
     public interface IGunRepository
     {
         void Save(Gun newGun);
+        List<Gun> GetAll(string userId);
     }
 }
