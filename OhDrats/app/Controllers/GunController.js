@@ -14,7 +14,6 @@
         };
 
 
-
         $scope.gunHistory = function () {
             $http({
                 method: 'GET',
@@ -33,15 +32,13 @@
             for (var i = 0; i <= 5; i++) {
                 var gunSelectionName = result.data[i].GunName;
                 var gunSelectionAmmo = result.data[i].AmountOfAmmo;
-    
 
                 $('#gunHistoryOutput').append(`<h4>You have the ${gunSelectionName} gun, and it holds ${gunSelectionAmmo} rounds of ammo.</h4>`);
-
-
-
             }
+        };
 
-
+        $scope.addNewBattle = function () {
+            $location.url("/battle");
         };
     }
 ]);

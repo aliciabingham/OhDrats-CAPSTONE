@@ -3,8 +3,8 @@
 app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider.when("/",
         {
-            templateUrl: "app/Partials/Login.html",
-            controller: "LoginController"
+            templateUrl: "app/Partials/Home.html",
+            controller: "HomeController"
         })
         .when("/home",
         {
@@ -43,8 +43,10 @@ app.run(["$http", function ($http) {
 
     var token = sessionStorage.getItem('token');
 
-    if (token)
+    if (token) {
         $http.defaults.headers.common['Authorization'] = `bearer ${token}`;
+
+    }
 
 }
 ]);

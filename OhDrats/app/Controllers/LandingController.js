@@ -7,5 +7,13 @@
             $location.path("/gun");
             console.log("you hit submit on gun");
         }
+
+        $scope.logout = function () {
+
+            sessionStorage.removeItem('token');
+            $http.defaults.headers.common['Authorization'] = "";
+
+            $location.path("/login");
+        };
     }
 ]);

@@ -8,5 +8,18 @@
 
             $location.path("/login");
         };
+
+        $scope.goLogin = function () {
+            $location.path("/login");
+        };
+
+        $scope.goSignUp = function () {
+            $location.path("/signup");
+        };
+
+
+
+
+
     }
 ]);

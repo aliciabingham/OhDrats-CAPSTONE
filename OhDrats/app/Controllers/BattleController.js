@@ -34,7 +34,7 @@
 
             console.log(answer);
 
-            $('#output').html(`<br><h4>You shot at ${opponent} ${total} times with your ${gun} gun. You missed ${misses} times, making your accuracy for this battle ${answer}%!</h4>`);
+            $('#output').html(`<br><h4>You shot at <b>${opponent} ${total}</b> times with your <b>${$scope.Gun}</b> gun. You missed <b>${misses}</b> times, making your accuracy for this battle <b>${answer}%!</b></h4>`);
         }
 
         $scope.battleHistory = function () {
@@ -46,6 +46,19 @@
                 $scope.displayHistory(result);
             });
         };
+
+        $scope.gunChoices = function () {
+            $http({
+                method: 'GET',
+                url: 'api/gun/gunhistory'
+            })
+            .then(function (result) {
+                console.log("result from gun get", result);
+                $scope.GunNames = result.data;
+            })
+        }
+
+        $scope.gunChoices();
 
         $scope.displayHistory = function (result) {
             $('#battleHistoryOutput').html('');
@@ -59,6 +72,10 @@
 
                 $('#battleHistoryOutput').append(`<h4>You recently had a battle with <b>${battleHistoryOpponentName}</b>, in which you fired <b>${battleHistoryShotsFired}</b> shots, hit <b>${battleHistoryShotsHit}</b> times, missed <b>${battleHistoryShotsMissed}</b> times, and used the <b>${battleHistoryGun}</b> gun. <br><br></h4>`);
             }
+        };
+
+        $scope.addNewGun = function () {
+            $location.url("/gun");
         };
 }
 ]);
