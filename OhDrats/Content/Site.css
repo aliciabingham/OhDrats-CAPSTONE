@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #EEF0F2;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,3 +16,55 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.navbar {
+    background-color: #29335C;
+    
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #EEF0F2;
+    font-size: 1.3em;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #EEF0F2;
+    font-size: 2em;
+}
+
+.ohDrats {
+    color: #E4572E;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 8em;
+    letter-spacing: 10px;
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    padding: 0px;
+}
+
+.ohDrats2 {
+    color: #E4572E;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 8em;
+    letter-spacing: 10px;
+    z-index: 0;
+    position: relative;
+    top: -142px;   
+}
+
+.loginButton {
+    margin-left: 480px;
+}
+
+.signUpButton {
+
+}
+
+.buttonContainer {
+
+}
+

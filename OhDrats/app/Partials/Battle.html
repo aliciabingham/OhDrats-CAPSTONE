@@ -6,10 +6,15 @@
 <input type="number" placeholder="Shots Fired" ng-model="shotsFired"/>
 <input type="number" placeholder="Hits" ng-model="shotsHit"/>
 <input type="number" placeholder="Misses" ng-model="shotsMissed"/>
-<input type="text" placeholder="Gun" ng-model="Gun"/>
+<select ng-model="Gun">
+    <option ng-repeat="name in GunNames" value="{{name.GunName}}">{{name.GunName}}</option>
+</select>
 
 <button ng-click="addOpponent()">Submit</button>
 <div id="output"></div>
 <br />
 <button ng-click="battleHistory()">Display Last 15 Battles</button>
 <div id="battleHistoryOutput"></div>
+
+<button ng-click="addNewGun()">Add New Gun</button>
+
